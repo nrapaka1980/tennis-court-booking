@@ -1,0 +1,335 @@
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 16px 48px;
+}
+
+/* Name gate */
+.name-gate {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.name-gate-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 32px;
+  max-width: 380px;
+  width: 100%;
+  text-align: center;
+}
+
+.name-gate-card p {
+  margin: 8px 0 20px;
+}
+
+.name-gate-card form {
+  display: flex;
+  gap: 8px;
+}
+
+.name-gate-card input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text-h);
+  font-size: 15px;
+}
+
+.auth-form {
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.auth-form input {
+  width: 100%;
+}
+
+.auth-error {
+  color: var(--danger);
+  font-size: 13px;
+  text-align: left;
+  margin: -4px 0 0;
+}
+
+/* Header */
+.app-header {
+  padding: 24px 0 16px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 24px;
+}
+
+.app-header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.app-header-top h1 {
+  font-size: 22px;
+}
+
+.user-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.link-button {
+  background: none;
+  border: none;
+  color: var(--accent);
+  padding: 0;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.tabs {
+  display: flex;
+  gap: 8px;
+}
+
+.tab {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 8px 16px;
+  color: var(--text);
+}
+
+.tab.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+
+/* Banners */
+.banner {
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.banner-error {
+  background: var(--taken-bg);
+  border: 1px solid var(--danger);
+  color: var(--danger);
+}
+
+/* Date strip */
+.date-strip {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  margin-bottom: 24px;
+}
+
+.date-pill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 64px;
+  padding: 10px 8px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  flex-shrink: 0;
+}
+
+.date-pill.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+
+.date-pill-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.date-pill-num {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.date-pill-today {
+  font-size: 10px;
+  margin-top: 2px;
+}
+
+/* Court list / card */
+.court-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.court-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.court-card-header h3 {
+  font-size: 18px;
+}
+
+.court-meta {
+  color: var(--text);
+  font-size: 13px;
+  opacity: 0.75;
+  margin-top: 2px;
+}
+
+.slot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(88px, 1fr));
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.slot {
+  padding: 8px 4px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  font-size: 13px;
+  text-align: center;
+}
+
+.slot-available {
+  background: var(--available-bg);
+  border-color: var(--available-border);
+  color: var(--text-h);
+}
+
+.slot-available:hover {
+  filter: brightness(0.97);
+}
+
+.slot-mine {
+  background: var(--mine-bg);
+  border-color: var(--mine-border);
+  color: var(--text-h);
+  font-weight: 600;
+}
+
+.slot-taken {
+  background: var(--taken-bg);
+  border-color: var(--taken-border);
+  color: var(--text);
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* My bookings */
+.booking-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.booking-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 20px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 48px 16px;
+  color: var(--text);
+  opacity: 0.75;
+}
+
+/* Buttons */
+.primary, .secondary, .danger {
+  border-radius: 8px;
+  padding: 10px 18px;
+  border: 1px solid transparent;
+  font-size: 14px;
+}
+
+.primary {
+  background: var(--accent);
+  color: white;
+}
+
+.primary:hover {
+  background: var(--accent-hover);
+}
+
+.secondary {
+  background: none;
+  border-color: var(--border);
+  color: var(--text-h);
+}
+
+.danger {
+  background: var(--danger);
+  color: white;
+}
+
+.danger:hover {
+  background: var(--danger-hover);
+}
+
+.name-gate-card button[type="submit"] {
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0 18px;
+}
+
+.name-gate-card button[type="submit"]:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Modal */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 10;
+}
+
+.modal-card {
+  background: var(--surface);
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 360px;
+  width: 100%;
+}
+
+.modal-card p {
+  margin: 6px 0;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 20px;
+}
